@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwood Botanical Tales · Garden wisdom, plant stories & seasonal guides</title>
+    <meta name="description" content="Independent gardening journal: practical growing guides, plant profiles, soil wisdom and seasonal reflections from the Ashwood garden.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ashwood Botanical Tales">
+    <meta property="og:description" content="Garden wisdom, plant stories & seasonal guides from an independent gardening journal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ashwoodbotanicaltales.com/">
+    <meta property="og:image" content="https://www.ashwoodbotanicaltales.com/images/garden-hero.jpg">
+    <!-- canonical -->
+    <link rel="canonical" href="https://www.ashwoodbotanicaltales.com/">
+    <!-- schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Ashwood Botanical Tales",
+      "description": "Gardening journal with long-form articles on growing, soil, design and seasonal tasks.",
+      "url": "https://www.ashwoodbotanicaltales.com/",
+      "author": {
+        "@type": "Person",
+        "name": "Elena Marsh"
+      }
+    }
+    </script>
+    <style>
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f7;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2e3b2e;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        .wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.02);
+            padding: 0 2rem 2rem;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 {
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e2b1e;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid #dcd9d2;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #3b5e3b;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #1e3a1e;
+            text-decoration: underline;
+        }
+
+        /* --- HEADER --- */
+        .blog-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 1px solid #e2dfd8;
+            margin-bottom: 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #3b5e3b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f0ede6;
+            font-size: 1.8rem;
+            font-weight: 400;
+            font-family: 'Georgia', serif;
+            line-height: 1;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text .main {
+            font-size: 1.75rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1e2b1e;
+        }
+
+        .logo-text .sub {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #6f7a6a;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #3a4a3a;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #1e2b1e;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* --- SEARCH & FILTER BAR --- */
+        .search-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1.5rem 0 2.5rem;
+            gap: 1rem;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f3f1ec;
+            border-radius: 40px;
+            padding: 0.3rem 0.3rem 0.3rem 1.2rem;
+            border: 1px solid #ddd9d0;
+            flex: 1 1 300px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            padding: 0.6rem 0.5rem 0.6rem 0;
+            font-size: 1rem;
+            font-family: 'Georgia', serif;
+            width: 100%;
+            outline: none;
+            color: #2e3b2e;
+        }
+
+        .search-box button {
+            background: #3b5e3b;
+            border: none;
+            color: #f0ede6;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: background 0.15s;
+            white-space: nowrap;
+        }
+
+        .search-box button:hover {
+            background: #2b462b;
+        }
+
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .category-filters button {
+            background: transparent;
+            border: 1px solid #ccc8bf;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #4e5e4e;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .category-filters button.active,
+        .category-filters button:hover {
+            background: #3b5e3b;
+            border-color: #3b5e3b;
+            color: #f0ede6;
+        }
+
+        /* --- MAIN GRID: CONTENT + SIDEBAR --- */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr 330px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        /* --- FEATURED ARTICLE --- */
+        .featured-article {
+            margin-bottom: 3rem;
+        }
+
+        .featured-article img {
+            width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            background: #e8e4dd;
+        }
+
+        .featured-article .meta {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: #6f7a6a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+        }
+
+        .featured-article h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-article .excerpt {
+            font-size: 1.15rem;
+            color: #3d4a3d;
+            margin-bottom: 1.25rem;
+        }
+
+        .read-more {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            color: #3b5e3b;
+            display: inline-block;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* --- ARTICLE GRID / CARDS --- */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem 2rem;
+            margin: 2rem 0 2.5rem;
+        }
+
+        .article-card {
+            border-bottom: 1px solid #e2dfd8;
+            padding-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card .meta {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6f7a6a;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .article-card h3 a {
+            color: #1e2b1e;
+        }
+
+        .article-card h3 a:hover {
+            color: #3b5e3b;
+            text-decoration: underline;
+        }
+
+        .article-card p {
+            font-size: 0.95rem;
+            color: #4f5d4f;
+            margin-bottom: 0.75rem;
+            flex: 1;
+        }
+
+        .article-card .readtime {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.75rem;
+            color: #7e8a7e;
+        }
+
+        /* --- CATEGORY SECTION (within main) --- */
+        .category-section {
+            margin: 3rem 0;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #dcd9d2;
+            padding-bottom: 0.5rem;
+        }
+
+        .category-header h2 {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .category-header .view-all {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        .sidebar-widget {
+            margin-bottom: 2.5rem;
+            background: #f7f5f1;
+            padding: 1.75rem 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #eae7e1;
+        }
+
+        .sidebar-widget h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.25rem;
+            color: #3b4e3b;
+            font-weight: 600;
+        }
+
+        .sidebar-widget ul {
+            list-style: none;
+        }
+
+        .sidebar-widget li {
+            margin-bottom: 0.9rem;
+            border-bottom: 1px dashed #d9d5cc;
+            padding-bottom: 0.9rem;
+        }
+
+        .sidebar-widget li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .sidebar-widget a {
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+            color: #2e3b2e;
+            line-height: 1.4;
+            display: block;
+        }
+
+        .sidebar-widget .small-meta {
+            font-size: 0.7rem;
+            color: #7e8a7e;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .author-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            background: #c9cfc0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2b3e2b;
+            font-family: 'Georgia', serif;
+            flex-shrink: 0;
+        }
+
+        .author-info .name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .author-info .role {
+            font-size: 0.75rem;
+            color: #6f7a6a;
+        }
+
+        /* --- NEWSLETTER SECTION --- */
+        .newsletter-section {
+            background: #edebe4;
+            padding: 3rem 2.5rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-section h2 {
+            border-bottom: none;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-section p {
+            max-width: 550px;
+            margin: 0 auto 1.75rem;
+            color: #3d4a3d;
+        }
+
+        .newsletter-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1 1 240px;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid #ccc8bf;
+            border-radius: 40px;
+            font-family: 'Georgia', serif;
+            font-size: 0.95rem;
+            background: #ffffff;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background: #3b5e3b;
+            border: none;
+            color: #f0ede6;
+            padding: 0.9rem 2rem;
+            border-radius: 40px;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.15s;
+        }
+
+        .newsletter-form button:hover {
+            background: #2b462b;
+        }
+
+        /* --- FAQ SECTION --- */
+        .faq-section {
+            margin: 3rem 0;
+        }
+
+        .faq-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2dfd8;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .faq-item p {
+            color: #3d4a3d;
+            max-width: 85%;
+        }
+
+        /* --- FOOTER --- */
+        .blog-footer {
+            border-top: 1px solid #dcd9d2;
+            padding: 2.5rem 0 1.5rem;
+            margin-top: 2rem;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: #5e6a5e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #4e5e4e;
+        }
+
+        .footer-links a:hover {
+            color: #1e2b1e;
+        }
+
+        /* --- ARTICLE PAGE (hidden by default) --- */
+        .article-page {
+            display: none;
+            margin: 2rem 0;
+        }
+
+        .article-page.active {
+            display: block;
+        }
+
+        .article-page .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-page .article-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-page .article-meta {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: #6f7a6a;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-page .article-content {
+            max-width: 780px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2e3b2e;
+        }
+
+        .article-page .article-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-page .article-content h3 {
+            margin: 2rem 0 1rem;
+            font-size: 1.7rem;
+        }
+
+        .article-page .article-content blockquote {
+            border-left: 4px solid #b7c0b0;
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: #3d4a3d;
+            margin: 1.5rem 0;
+        }
+
+        .back-link {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #3b5e3b;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .sidebar-widget {
+                margin-bottom: 0;
+            }
+
+            .wrapper {
+                padding: 0 1.5rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .featured-article h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .blog-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .search-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .category-filters {
+                justify-content: flex-start;
+            }
+
+            .wrapper {
+                padding: 0 1rem 1rem;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-section {
+                padding: 2rem 1.25rem;
+            }
+
+            .faq-item p {
+                max-width: 100%;
+            }
+
+            .blog-footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            .featured-article h1 {
+                font-size: 1.8rem;
+            }
+
+            .article-page .article-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* --- UTILITY --- */
+        .hidden {
+            display: none;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- ========== HEADER ========== -->
+    <header class="blog-header">
+        <div class="logo-area">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">
+                <span class="main">Ashwood Botanical Tales</span>
+                <span class="sub">Independent gardening journal</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== HOME PAGE ========== -->
+    <main id="homePage">
+        <!-- search + filter -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+                <button onclick="performSearch()">Search</button>
+            </div>
+            <div class="category-filters" id="categoryFilters">
+                <button class="active" onclick="filterCategory('all')">All</button>
+                <button onclick="filterCategory('growing')">Growing</button>
+                <button onclick="filterCategory('soil')">Soil</button>
+                <button onclick="filterCategory('design')">Design</button>
+                <button onclick="filterCategory('seasonal')">Seasonal</button>
+                <button onclick="filterCategory('tools')">Tools</button>
+            </div>
+        </div>
+
+        <!-- FEATURED ARTICLE -->
+        <section class="featured-article">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1200&auto=format&fit=crop" alt="Raised garden beds with lush vegetables and herbs in morning light">
+            <div class="meta">Featured · Growing · 12 min read</div>
+            <h1><a href="#" onclick="openArticle('noDigRevolution'); return false;">The No-Dig Revolution: How to Build Living Soil Without a Spade</a></h1>
+            <p class="excerpt">For centuries, gardeners were told to double-dig, till, and turn. But a growing movement of growers is proving that the best soil is the one you never disturb. We visit three no-dig plots to see the results.</p>
+            <a href="#" class="read-more" onclick="openArticle('noDigRevolution'); return false;">Read article →</a>
+        </section>
+
+        <!-- ARTICLE GRID (popular / recent) -->
+        <section>
+            <div class="category-header">
+                <h2>Latest from the garden</h2>
+                <a href="#" class="view-all" onclick="filterCategory('all'); return false;">View all →</a>
+            </div>
+            <div class="article-grid" id="articleGrid">
+                <!-- cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- CATEGORY SECTION: GROWING -->
+        <section class="category-section" id="section-growing">
+            <div class="category-header">
+                <h2>Growing guides</h2>
+                <a href="#" class="view-all" onclick="filterCategory('growing'); return false;">All growing →</a>
+            </div>
+            <div class="article-grid" id="growingGrid"></div>
+        </section>
+
+        <!-- CATEGORY SECTION: SOIL -->
+        <section class="category-section" id="section-soil">
+            <div class="category-header">
+                <h2>Soil &amp; compost</h2>
+                <a href="#" class="view-all" onclick="filterCategory('soil'); return false;">All soil →</a>
+            </div>
+            <div class="article-grid" id="soilGrid"></div>
+        </section>
+
+        <!-- CATEGORY SECTION: DESIGN -->
+        <section class="category-section" id="section-design">
+            <div class="category-header">
+                <h2>Garden design</h2>
+                <a href="#" class="view-all" onclick="filterCategory('design'); return false;">All design →</a>
+            </div>
+            <div class="article-grid" id="designGrid"></div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter-section">
+            <h2>Grow with us</h2>
+            <p>Monthly planting reminders, soil wisdom, and stories from the garden. No spam — just useful, seasonal guidance.</p>
+            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                <input type="email" placeholder="Your email address" required aria-label="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p style="font-size:0.8rem; margin-top:1rem; color:#6f7a6a;">We respect your privacy. Unsubscribe anytime.</p>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-item">
+                <h3>Do I really need to dig my soil?</h3>
+                <p>No — in fact, digging can damage the delicate fungal networks and soil structure. No-dig gardening builds fertility by layering organic matter on top, letting worms and microbes do the work.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What is the best time to start a vegetable garden?</h3>
+                <p>It depends on your climate, but early spring or autumn are ideal. Autumn planting lets roots establish before winter, while spring gives warmth-loving crops a head start.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I improve clay soil without chemicals?</h3>
+                <p>Add plenty of organic matter — compost, leaf mould, well-rotted manure — and avoid walking on beds when wet. Over time, clay becomes a rich, workable loam.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I garden in small spaces?</h3>
+                <p>Absolutely. Containers, vertical planters, and windowsill herbs can produce a surprising amount. Focus on high-value crops like salad leaves, tomatoes, and herbs.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== ARTICLE PAGE ========== -->
+    <div id="articlePage" class="article-page">
+        <a href="#" class="back-link" onclick="showHome(); return false;">← Back to all articles</a>
+        <div class="article-header">
+            <h1 id="articleTitle"></h1>
+            <div class="article-meta" id="articleMeta"></div>
+        </div>
+        <div class="article-content" id="articleContent"></div>
+    </div>
+
+    <!-- ========== ABOUT PAGE ========== -->
+    <div id="aboutPage" class="article-page">
+        <a href="#" class="back-link" onclick="showHome(); return false;">← Back to home</a>
+        <div class="article-header">
+            <h1>About Ashwood Botanical Tales</h1>
+            <div class="article-meta">Independent · Ad-free · Reader-supported</div>
+        </div>
+        <div class="article-content">
+            <p>Ashwood Botanical Tales began in 2016 as a personal garden diary — a place to record what worked, what failed, and the quiet lessons that only come from hands in the soil. Today, it's a small independent publication read by over 40,000 gardeners each month.</p>
+            <p>We believe gardening is a practical art and a slow conversation with nature. Our articles are written by experienced growers, tested in real gardens, and free from corporate influence. We don't sell plants, pots, or miracle cures. We share what we've learned.</p>
+            <p>Our editorial focus is simple: deep, useful, seasonal. You'll find no listicles of "10 miracle plants" — instead, long-form guides on soil health, propagation, design, and the rhythms of the growing year.</p>
+            <p><strong>Elena Marsh</strong> — Editor &amp; founder. Elena has been growing food and flowers for over 20 years, and trained in organic horticulture at the Royal Botanic Gardens.</p>
+            <p><strong>Marcus Reed</strong> — Contributing editor. Marcus specialises in soil biology and no-dig systems, and runs a small market garden in the Cotswolds.</p>
+            <p>We're proudly reader-supported. If you value what we do, consider joining our newsletter — it's free, and it helps us keep the site independent.</p>
+        </div>
+    </div>
+
+    <!-- ========== CONTACT PAGE ========== -->
+    <div id="contactPage" class="article-page">
+        <a href="#" class="back-link" onclick="showHome(); return false;">← Back to home</a>
+        <div class="article-header">
+            <h1>Contact us</h1>
+            <div class="article-meta">We'd love to hear from you</div>
+        </div>
+        <div class="article-content">
+            <p>For editorial queries, story ideas, or corrections, please email <strong>hello@ashwoodbotanicaltales.com</strong>. We read every message but can't always reply individually.</p>
+            <p>For advertising or partnership enquiries, please write to <strong>partners@ashwoodbotanicaltales.com</strong>. We only work with brands that align with our values — no pesticides, no plastic-heavy products.</p>
+            <p>You can also find us on Instagram and Threads @ashwoodbotanical.</p>
+            <p style="margin-top:2rem; padding:1.5rem; background:#f7f5f1; border-radius:6px;">Ashwood Botanical Tales · 12 Orchard Lane · Herefordshire · HR1 2AB · United Kingdom</p>
+        </div>
+    </div>
+
+    <!-- ========== PRIVACY / TERMS / COOKIES ========== -->
+    <div id="privacyPage" class="article-page">
+        <a href="#" class="back-link" onclick="showHome(); return false;">← Back to home</a>
+        <div class="article-header">
+            <h1>Privacy, terms &amp; cookies</h1>
+            <div class="article-meta">Last updated: March 2026</div>
+        </div>
+        <div class="article-content">
+            <h3>Privacy policy</h3>
+            <p>We collect only the information you voluntarily provide — typically your email address if you subscribe to our newsletter. We never sell or share your data with third parties. Our site uses no tracking cookies; we use a privacy-first analytics tool that does not fingerprint users.</p>
+            <h3>Terms of use</h3>
+            <p>All content on Ashwood Botanical Tales is for general information and enjoyment. Gardening involves inherent risks — always use common sense, wear gloves, and check plant toxicity before consuming. We are not liable for any loss or damage arising from the use of our content.</p>
+            <h3>Cookie policy</h3>
+            <p>We use no advertising or tracking cookies. A single functional cookie may be set to remember your newsletter subscription preference. You can disable cookies in your browser without affecting your reading experience.</p>
+            <p>If you have any questions, contact us at privacy@ashwoodbotanicaltales.com.</p>
+        </div>
+    </div>
+
+    <!-- ========== SIDEBAR (only visible on home) ========== -->
+    <aside class="sidebar" id="sidebar" style="display:none;">
+        <div class="sidebar-widget">
+            <h4>About the editor</h4>
+            <div class="author-card">
+                <div class="author-avatar">E</div>
+                <div class="author-info">
+                    <div class="name">Elena Marsh</div>
+                    <div class="role">Editor &amp; founder</div>
+                </div>
+            </div>
+            <p style="font-size:0.9rem; color:#3d4a3d;">Elena has been growing food and flowers for over two decades. She writes about soil, seasons, and the quiet joy of tending a garden.</p>
+        </div>
+        <div class="sidebar-widget">
+            <h4>Popular articles</h4>
+            <ul id="popularList"></ul>
+        </div>
+        <div class="sidebar-widget">
+            <h4>Recommended</h4>
+            <ul id="recommendedList"></ul>
+        </div>
+        <div class="sidebar-widget" style="background:#edebe4;">
+            <h4>Seasonal tip</h4>
+            <p style="font-size:0.9rem; color:#2e3b2e;">“Plant garlic on the shortest day, harvest on the longest.” — old gardening proverb. Midwinter is perfect for garlic and broad beans.</p>
+        </div>
+    </aside>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="blog-footer" style="max-width:1300px; margin:0 auto; padding:2rem 1rem;">
+    <div>© 2026 Ashwood Botanical Tales. Independent gardening journal.</div>
+    <ul class="footer-links">
+        <li><a href="#" onclick="showAbout(); return false;">About</a></li>
+        <li><a href="#" onclick="showContact(); return false;">Contact</a></li>
+        <li><a href="#" onclick="showPrivacy(); return false;">Privacy</a></li>
+        <li><a href="#" onclick="showPrivacy(); return false;">Terms</a></li>
+        <li><a href="#" onclick="showPrivacy(); return false;">Cookies</a></li>
+    </ul>
+</footer>
+
+<script>
+    // ============================================================
+    // ARTICLE DATABASE (original long-form content)
+    // ============================================================
+    const articles = {
+        noDigRevolution: {
+            title: "The No-Dig Revolution: How to Build Living Soil Without a Spade",
+            category: "growing",
+            readtime: "12 min read",
+            author: "Elena Marsh",
+            date: "March 12, 2026",
+            excerpt: "For centuries, gardeners were told to double-dig, till, and turn. But a growing movement of growers is proving that the best soil is the one you never disturb.",
+            content: `
+                <p>On a cool morning in late March, I stood at the edge of a plot that hadn't been dug in seven years. The soil was dark, crumbly, and smelled faintly of mushrooms. A robin hopped across the surface, pausing to tug at a worm. This was once heavy clay — the kind that sticks to boots and cracks in summer. Now it was alive.</p>
+                <p>That plot belongs to Marcus Reed, a market gardener in the Cotswolds who has become something of a quiet evangelist for the no-dig method. "I used to spend every spare hour turning beds," he told me. "Now I spend that time observing, mulching, and actually growing."</p>
+                <h3>What is no-dig gardening?</h3>
+                <p>No-dig gardening — also called no-till or lasagne gardening — is exactly what it sounds like: you don't dig, till, or invert the soil. Instead, you build fertility by layering organic matter on the surface: compost, leaf mould, well-rotted manure, straw. Worms and soil organisms incorporate it for you.</p>
+                <p>The approach rests on a simple insight: soil is not an inert medium. It's a living ecosystem. Fungal networks, bacteria, microscopic insects, and worms all work together to feed plants. Digging shreds those networks, destroys fungal hyphae, and oxidises stored carbon.</p>
+                <blockquote>"The soil is not a machine you fix. It's a community you feed." — Marcus Reed</blockquote>
+                <h3>The science behind it</h3>
+                <p>Research from the Rodale Institute and various agricultural universities has shown that no-till systems increase soil organic matter, improve water retention, and reduce erosion. In gardens, the effects can be dramatic. A 2019 study in the journal <em>Soil Biology and Biochemistry</em> found that undisturbed soils had significantly higher fungal biomass — a key indicator of soil health.</p>
+                <p>But the benefits aren't just biological. No-dig beds need less watering because the mulch layer prevents evaporation. They suppress weeds because weed seeds remain buried. And they sequester carbon, making them a small but meaningful climate solution.</p>
+                <h3>How to start a no-dig bed</h3>
+                <p>If you're converting a lawn or weedy patch, start in autumn or early spring. Mow the area short, then lay down a thick layer of cardboard (remove tape and staples). Wet it thoroughly. On top, add 10–15 cm of compost or well-rotted manure. That's it. Plant directly into the compost layer.</p>
+                <p>For existing beds, simply add 2–5 cm of compost each year, in autumn or early spring. Never dig it in. Let the worms do the work.</p>
+                <h3>What about slugs and pests?</h3>
+                <p>No-dig gardens often have fewer pest problems because predators like ground beetles and centipedes thrive in undisturbed soil. Slugs can be an issue in wet conditions, but a healthy garden with hedges, ponds, and wild corners tends to balance itself.</p>
+                <p>Marcus uses a simple rule: "If I see a pest, I look for the predator. Usually, it's already there — I just need to give it habitat."</p>
+                <h3>Does it really work?</h3>
+                <p>I've been running a no-dig trial in my own garden for three years. The first year, yields were lower than my dug beds. By year three, they were significantly higher — and I'd spent a fraction of the time on maintenance. The soil is darker, softer, and full of worms.</p>
+                <p>It's not magic. It's patience. But for gardeners willing to trust the soil, the results speak for themselves.</p>
+            `
+        },
+        soilFoodWeb: {
+            title: "The Soil Food Web: A Beginner's Guide to the Life Beneath Your Feet",
+            category: "soil",
+            readtime: "9 min read",
+            author: "Marcus Reed",
+            date: "February 28, 2026",
+            excerpt: "A single teaspoon of healthy soil contains more microorganisms than there are people on Earth. Here's why that matters for your garden.",
+            content: `
+                <p>If you've ever crumbled a handful of rich, dark soil and inhaled that earthy scent — that's geosmin, produced by soil bacteria. It's the smell of life. And that life is unimaginably vast.</p>
+                <p>A single teaspoon of healthy soil can contain billions of bacteria, several metres of fungal hyphae, and thousands of protozoa and nematodes. Together, they form the soil food web — a complex network that cycles nutrients, builds structure, and suppresses disease.</p>
+                <h3>The main players</h3>
+                <p><strong>Bacteria:</strong> The decomposers. They break down simple organic compounds and convert nitrogen into forms plants can use. They thrive in disturbed, annual-dominated soils.</p>
+                <p><strong>Fungi:</strong> The networkers. Fungal hyphae extend far beyond plant roots, scavenging phosphorus and water. They form symbiotic relationships with plants called mycorrhizae. They dominate in undisturbed, perennial systems.</p>
+                <p><strong>Protozoa and nematodes:</strong> The grazers. They eat bacteria and fungi, releasing excess nitrogen in a form plants can absorb. They're the recyclers of the soil world.</p>
+                <p><strong>Arthropods and earthworms:</strong> The engineers. They shred organic matter, create burrows, and mix soil layers. Earthworm casts are among the most fertile materials in nature.</p>
+                <h3>How to feed the soil food web</h3>
+                <p>The single best thing you can do is add organic matter — compost, leaf mould, mulch. Organic matter is food for the web. The second best thing is to disturb the soil as little as possible.</p>
+                <p>Cover crops like clover, vetch, and rye also feed soil life. Their roots exude sugars that attract bacteria and fungi. When they die back, their residues become food.</p>
+                <h3>Why it matters</h3>
+                <p>A healthy soil food web means plants that are more resilient to drought, pests, and disease. It means less need for fertilisers and pesticides. And it means your garden becomes a carbon sink rather than a carbon source.</p>
+                <p>You can't see most of this life with the naked eye. But you can see its effects: dark, crumbly soil; vigorous plants; a garden that feels alive.</p>
+            `
+        },
+        autumnPlanting: {
+            title: "Autumn Planting: Why Fall Is the Best Time to Start Your Garden",
+            category: "seasonal",
+            readtime: "8 min read",
+            author: "Elena Marsh",
+            date: "September 5, 2025",
+            excerpt: "Spring gets all the glory, but autumn is the quiet hero of the gardening year. Here's what to plant and why it works.",
+            content: `
+                <p>There's a moment in early September when the garden exhales. The frantic growth of summer slows, the light softens, and the soil — still warm from months of sun — is ready for new roots.</p>
+                <p>Autumn is, in many ways, the ideal planting season. The soil is warm, moisture is plentiful, and plants have time to establish before winter dormancy. By spring, they're already settled in, ready to grow.</p>
+                <h3>What to plant in autumn</h3>
+                <p><strong>Garlic and broad beans:</strong> Plant in October or November for a head start. They'll overwinter and produce earlier crops than spring plantings.</p>
+                <p><strong>Spring bulbs:</strong> Daffodils, tulips, alliums, and crocus all need a period of cold to flower. Plant them in September and October.</p>
+                <p><strong>Bare-root trees and shrubs:</strong> Autumn is the best time to plant bare-root roses, fruit trees, and hedges. They're cheaper and establish better than potted plants.</p>
+                <p><strong>Perennials:</strong> Divide and replant perennials while the soil is still warm. They'll root before the first frost.</p>
+                <h3>Why autumn works</h3>
+                <p>Soil temperatures remain above 10°C well into autumn in most temperate climates. Roots continue to grow until the soil drops below that threshold. This means autumn-planted crops develop strong root systems before winter.</p>
+                <p>Rainfall is also more reliable in autumn, reducing the need for irrigation. And pests and diseases are less active, giving young plants a better chance.</p>
+                <h3>Preparing beds for autumn</h3>
+                <p>Clear summer crops, add a layer of compost, and mulch with leaves or straw. Don't dig — let the worms incorporate the organic matter. If you're planting into heavy clay, add grit or compost to improve drainage.</p>
+                <p>Autumn is also the time to sow green manures like field beans, phacelia, or winter rye. They'll protect the soil from erosion and add organic matter when dug in (or cut and left on the surface) in spring.</p>
+                <p>So don't pack away your trowel just yet. The garden year is far from over.</p>
+            `
+        },
+        designingSmallGarden: {
+            title: "Designing a Small Garden: Big Ideas for Tiny Spaces",
+            category: "design",
+            readtime: "10 min read",
+            author: "Elena Marsh",
+            date: "January 18, 2026",
+            excerpt: "A courtyard, balcony, or pocket-sized plot can be just as productive and beautiful as a large garden. Here's how to make every centimetre count.",
+            content: `
+                <p>My first garden was a north-facing balcony, three metres by one and a half. I grew tomatoes, herbs, salad leaves, and a small apple tree in a pot. It was cramped, wind-scoured, and utterly magical.</p>
+                <p>Small gardens demand creativity. But they also offer something larger gardens often lack: intimacy. Every plant is close enough to touch, smell, and observe.</p>
+                <h3>Start with the bones</h3>
+                <p>In a small space, structure matters more, not less. Use vertical elements — trellises, obelisks, wall-mounted planters — to draw the eye upward. Choose a limited palette of materials: one or two types of pot, one style of path, one colour of furniture.</p>
+                <p>Focal points are essential. A single beautiful container, a small water feature, or a well-pruned shrub can anchor the space.</p>
+                <h3>Choose the right plants</h3>
+                <p>In small gardens, every plant must earn its place. Prioritise:</p>
+                <ul style="margin-bottom:1.5rem; padding-left:1.5rem;">
+                    <li><strong>Productive plants:</strong> herbs, salad leaves, dwarf beans, cherry tomatoes.</li>
+                    <li><strong>Long-season interest:</strong> plants with attractive foliage, like heucheras or hardy geraniums.</li>
+                    <li><strong>Scent:</strong> lavender, rosemary, daphne, or jasmine near a door or seating area.</li>
+                </ul>
+                <h3>Make the most of vertical space</h3>
+                <p>Walls and fences are prime real estate. Use wall-mounted trellis for climbing beans, cucumbers, or roses. Hang baskets with trailing herbs and flowers. Stack pots on tiered planters.</p>
+                <p>But don't overcrowd. Leave some blank space — it gives the eye rest and makes the space feel larger.</p>
+                <h3>The soil question</h3>
+                <p>In containers, use a high-quality potting mix, not garden soil. Garden soil compacts in pots and lacks drainage. Refresh the top few centimetres each year, or repot every two to three years.</p>
+                <p>Watering is the biggest challenge in small gardens. Containers dry out fast. Mulch the surface, group pots together, and consider a simple drip irrigation system on a timer.</p>
+                <h3>Embrace the seasons</h3>
+                <p>A small garden can be beautiful year-round. Spring bulbs in pots, summer annuals, autumn foliage, and winter structure from evergreens and grasses. Change displays seasonally — it keeps the space fresh.</p>
+                <p>Most of all, enjoy it. A small garden is not a compromise. It's an invitation to garden with intention.</p>
+            `
+        },
+        compostGuide: {
+            title: "The Complete Guide to Home Composting (Even in Small Spaces)",
+            category: "soil",
+            readtime: "11 min read",
+            author: "Marcus Reed",
+            date: "November 10, 2025",
+            excerpt: "Composting is the single most useful thing a gardener can do. Here's how to make rich, crumbly compost — without smells, rats, or fuss.",
+            content: `
+                <p>Compost is garden gold. It improves soil structure, feeds soil life, and reduces waste. And making it is easier than most people think.</p>
+                <h3>The basics</h3>
+                <p>Composting is the controlled decomposition of organic matter. You need four things: nitrogen-rich "greens" (kitchen scraps, grass clippings), carbon-rich "browns" (cardboard, leaves, straw), moisture, and air.</p>
+                <p>The ideal ratio is roughly two parts browns to one part greens by volume. Too many greens and it gets slimy and smelly. Too many browns and it breaks down slowly.</p>
+                <h3>Choosing a system</h3>
+                <p><strong>Open heap:</strong> Best for larger gardens. Simply pile materials in a corner and turn occasionally.</p>
+                <p><strong>Dalek bin:</strong> A plastic cone-shaped bin, ideal for small gardens. Add materials through the top, harvest from the bottom hatch.</p>
+                <p><strong>Wormery:</strong> Perfect for balconies or indoors. Worms process kitchen scraps into nutrient-rich castings.</p>
+                <p><strong>Bokashi:</strong> A Japanese method that ferments kitchen waste, including cooked food and meat. Produces a liquid feed and pre-composted material.</p>
+                <h3>What to compost</h3>
+                <p>Yes: fruit and veg scraps, coffee grounds, tea leaves, eggshells, grass clippings, leaves, cardboard, paper, straw, plant trimmings (disease-free).</p>
+                <p>No: meat, fish, dairy, cooked food (unless using Bokashi), diseased plants, weeds with seed heads, pet waste.</p>
+                <h3>Troubleshooting</h3>
+                <p><strong>Smelly and slimy:</strong> Too wet, too many greens. Add browns and turn.</p>
+                <p><strong>Dry and inactive:</strong> Add water and greens, turn.</p>
+                <p><strong>Attracting rats:</strong> Don't add cooked food or meat. Use a sealed bin or wormery.</p>
+                <h3>How to use compost</h3>
+                <p>Use finished compost as a mulch, dig it into vegetable beds (or leave on the surface in no-dig systems), or make compost tea. It's impossible to overuse — plants love it.</p>
+                <p>Composting connects you to the cycle of growth and decay. It's a small act with a big impact.</p>
+            `
+        },
+        toolEssentials: {
+            title: "Ten Garden Tools That Are Actually Worth Buying",
+            category: "tools",
+            readtime: "7 min read",
+            author: "Elena Marsh",
+            date: "October 3, 2025",
+            excerpt: "You don't need a shed full of gadgets. These ten tools will handle almost every gardening task with grace and durability.",
+            content: `
+                <p>I've tested a lot of garden tools over the years. Most are unnecessary. Some are actively bad. But a few — a very few — are so well-designed that they become extensions of your hand.</p>
+                <h3>1. A good digging fork</h3>
+                <p>Not a spade — a fork. It's gentler on soil structure and better for lifting plants. Look for stainless steel and a hardwood handle.</p>
+                <h3>2. Bypass secateurs</h3>
+                <p>Felco or Okatsune. Sharp, replaceable blades, comfortable grip. You'll use them every day.</p>
+                <h3>3. Hori Hori knife</h3>
+                <p>A Japanese tool that's part trowel, part knife, part weed extractor. Once you own one, you'll wonder how you gardened without it.</p>
+                <h3>4. Stainless steel trowel</h3>
+                <p>For planting, potting, and weeding. Get one with depth markings.</p>
+                <h3>5. Dutch hoe</h3>
+                <p>The best tool for weeding paths and beds. Push and pull — it slices weeds just below the surface.</p>
+                <h3>6. Leaf rake</h3>
+                <p>A flexible plastic or metal rake for gathering leaves and debris. Essential for making leaf mould.</p>
+                <h3>7. Watering can with a rose</h3>
+                <p>A fine rose for seedlings, a coarse one for established plants. Haws or similar quality brands last decades.</p>
+                <h3>8. Garden twine and a holder</h3>
+                <p>Natural jute twine, biodegradable. A holder that clips to your belt saves endless frustration.</p>
+                <h3>9. Kneeler and seat</h3>
+                <p>Save your knees. A simple foam kneeler or a flip-up seat/kneeler is worth its weight in gold.</p>
+                <h3>10. A sturdy wheelbarrow or garden cart</h3>
+                <p>For moving compost, mulch, plants, and tools. A good one will outlast you.</p>
+                <p>Buy the best you can afford, and look after them. Clean tools work better and last longer.</p>
+            `
+        },
+        seedStarting: {
+            title: "Seed Starting Indoors: A Complete Beginner's Guide",
+            category: "growing",
+            readtime: "10 min read",
+            author: "Elena Marsh",
+            date: "February 2, 2026",
+            excerpt: "Starting seeds indoors gives you a head start on the season, saves money, and opens up a world of varieties you'll never find in garden centres.",
+            content: `
+                <p>There's nothing quite like watching a tiny green shoot emerge from a seed you planted yourself. It's hope made visible.</p>
+                <p>Starting seeds indoors is simple, but it does require attention to a few key factors: light, warmth, moisture, and timing.</p>
+                <h3>What you need</h3>
+                <p><strong>Seeds:</strong> Choose varieties suited to your climate and space. Check the sowing dates on the packet.</p>
+                <p><strong>Containers:</strong> Seed trays, modules, or recycled pots. Clean them well to avoid disease.</p>
+                <p><strong>Seed compost:</strong> A fine, low-nutrient mix. Don't use garden soil or multipurpose compost — it's too rich.</p>
+                <p><strong>Light:</strong> A sunny windowsill may be enough for some plants, but most seedlings need more. A simple LED grow light makes a huge difference.</p>
+                <p><strong>Warmth:</strong> Most seeds germinate best at 18–22°C. A heat mat helps, but a warm room works for many varieties.</p>
+                <h3>Sowing</h3>
+                <p>Fill containers with compost, firm gently, and water. Sow seeds at the depth recommended on the packet — usually about twice their diameter. Cover with a fine layer of compost or vermiculite.</p>
+                <p>Label everything. It's easy to forget what you sowed where.</p>
+                <h3>After germination</h3>
+                <p>Once seedlings emerge, remove any plastic covers and move them to bright light. Keep the compost moist but not waterlogged. If seedlings are leggy, they need more light.</p>
+                <p>When the first true leaves appear, prick out seedlings into individual pots. Handle them by the leaves, not the stem.</p>
+                <h3>Hardening off</h3>
+                <p>Before planting outside, acclimatise seedlings gradually. Put them outside for a few hours each day, increasing the time over a week. This toughens them up and prevents shock.</p>
+                <h3>Common mistakes</h3>
+                <p>Overwatering, not enough light, sowing too early, and not labelling. Learn from them — every gardener makes these mistakes at first.</p>
+                <p>Start small. A few trays of easy crops — lettuce, herbs, tomatoes — will build your confidence.</p>
+            `
+        },
+        waterWisdom: {
+            title: "Water Wisdom: How to Irrigate Your Garden Efficiently",
+            category: "growing",
+            readtime: "8 min read",
+            author: "Marcus Reed",
+            date: "July 14, 2025",
+            excerpt: "Watering is one of the most misunderstood garden tasks. Here's how to give plants what they need without wasting a drop.",
+            content: `
+                <p>Most gardeners overwater. It's a natural instinct — plants look thirsty, so we reach for the hose. But too much water is just as harmful as too little, and it wastes a precious resource.</p>
+                <h3>When to water</h3>
+                <p>Water in the early morning or late evening, when evaporation is lowest. Avoid midday watering — much of it evaporates before reaching the roots.</p>
+                <p>The best test is simple: push your finger into the soil. If it's dry at 5 cm, water. If it's damp, wait.</p>
+                <h3>How much to water</h3>
+                <p>Deep, infrequent watering is better than shallow, frequent watering. Deep watering encourages roots to grow downward, making plants more drought-resistant.</p>
+                <p>For established plants, a good soak once or twice a week is usually enough. Containers need more frequent watering.</p>
+                <h3>Watering techniques</h3>
+                <p><strong>Soaker hoses and drip irrigation:</strong> Deliver water slowly and directly to the roots. They save water and reduce disease by keeping foliage dry.</p>
+                <p><strong>Ollas:</strong> Unglazed clay pots buried in the soil. They seep water slowly, keeping soil evenly moist. Perfect for small gardens and containers.</p>
+                <p><strong>Mulch:</strong> The single best way to conserve water. A 5 cm layer of compost, straw, or leaves reduces evaporation by up to 70%.</p>
+                <h3>Signs of trouble</h3>
+                <p>Wilting in the evening is normal. Wilting in the morning means the plant is genuinely dry. Yellowing leaves can indicate overwatering. Brown, crispy edges usually mean underwatering.</p>
+                <p>Water is life. Use it wisely.</p>
+            `
+        },
+        winterStructure: {
+            title: "Winter Structure: Designing a Garden That Looks Good in December",
+            category: "design",
+            readtime: "9 min read",
+            author: "Elena Marsh",
+            date: "December 1, 2025",
+            excerpt: "A garden shouldn't disappear in winter. With the right bones, it can be just as beautiful in the cold months as in June.",
+            content: `
+                <p>Winter gardens have a stark beauty. Frosted seedheads, bare branches against grey skies, the subtle colours of bark and evergreen foliage. But many gardens look empty and forlorn from November to March.</p>
+                <p>The secret is structure — the permanent framework of trees, shrubs, hedges, and hard landscaping that holds the garden together year-round.</p>
+                <h3>Evergreen bones</h3>
+                <p>Evergreen shrubs and trees provide colour and form when everything else is dormant. Choose a mix of shapes and textures: columnar yews, rounded box, spiky phormiums, low-growing heathers.</p>
+                <p>Don't rely on a single evergreen. Diversity makes for a more interesting winter garden.</p>
+                <h3>Bark and stems</h3>
+                <p>Some plants are at their best in winter. The fiery stems of <em>Cornus sanguinea</em> 'Midwinter Fire', the peeling cinnamon bark of <em>Acer griseum</em>, the white stems of birch. Plant them where winter sun can backlight them.</p>
+                <h3>Seedheads and grasses</h3>
+                <p>Resist the urge to cut everything back in autumn. Leave seedheads of echinacea, sedum, and grasses standing. They catch frost and provide food for birds.</p>
+                <h3>Hard landscaping</h3>
+                <p>Paths, walls, and fences are visible even when plants aren't. Choose materials that age gracefully — brick, stone, weathered timber. Add a bench or a simple urn for year-round interest.</p>
+                <h3>Winter flowers</h3>
+                <p>Hellebores, winter jasmine, snowdrops, and witch hazel all flower in the coldest months. Plant them near paths and doors so you can enjoy them without braving the cold.</p>
+                <p>With a little planning, winter becomes a season of quiet beauty rather than a gardening dead zone.</p>
+            `
+        },
+        pruningBasics: {
+            title: "Pruning Basics: How to Cut Like a Pro (Without Killing Your Plants)",
+            category: "growing",
+            readtime: "9 min read",
+            author: "Elena Marsh",
+            date: "March 1, 2026",
+            excerpt: "Pruning is the most intimidating garden skill for many people. But with a few simple rules, it becomes intuitive — and deeply satisfying.",
+            content: `
+                <p>I used to be terrified of pruning. Every cut felt like a risk. But after years of practice — and a few mistakes — I've come to see it as one of the most creative and rewarding garden tasks.</p>
+                <h3>Why we prune</h3>
+                <p>Pruning improves plant health, controls size and shape, encourages flowering and fruiting, and removes dead or diseased wood. It's not about dominating the plant — it's about guiding it.</p>
+                <h3>The three Ds</h3>
+                <p>Start with the three Ds: dead, diseased, and damaged. Remove any wood that fits these categories first. This alone can transform a neglected shrub.</p>
+                <h3>When to prune</h3>
+                <p><strong>Spring-flowering shrubs:</strong> Prune after flowering. They bloom on old wood, so pruning in winter removes the flower buds.</p>
+                <p><strong>Summer-flowering shrubs:</strong> Prune in late winter or early spring. They bloom on new growth.</p>
+                <p><strong>Evergreens:</strong> Prune in late spring or early summer, after the risk of hard frost has passed.</p>
+                <p><strong>Trees:</strong> Prune in winter when dormant, except for maples and birches, which bleed if pruned in late winter.</p>
+                <h3>How to make a good cut</h3>
+                <p>Use sharp, clean tools. Make a cut just above a bud or a side branch, at a slight angle. Don't leave long stubs — they die back and invite disease. Don't cut too close to the bud either.</p>
+                <p>For larger branches, use the three-cut method: first cut underneath the branch, then from the top slightly further out, then remove the stub.</p>
+                <h3>Common mistakes</h3>
+                <p>Pruning at the wrong time, making flush cuts, leaving stubs, and over-pruning. Less is often more. Step back and look at the plant before making each cut.</p>
+                <p>Pruning is a conversation with the plant. Learn its language, and it will reward you.</p>
+            `
+        },
+        soilPh: {
+            title: "Understanding Soil pH: The Key to Healthy Plants",
+            category: "soil",
+            readtime: "8 min read",
+            author: "Marcus Reed",
+            date: "April 22, 2025",
+            excerpt: "Soil pH affects nutrient availability, plant health, and which crops will thrive. Here's how to measure it — and what to do about it.",
+            content: `
+                <p>Soil pH is a measure of acidity or alkalinity, on a scale from 0 to 14. Most plants prefer a slightly acidic to neutral soil, around pH 6.0 to 7.0. But some — like blueberries, rhododendrons, and heathers — need acid soil, while others — like brassicas and lavender — prefer alkaline conditions.</p>
+                <h3>Why pH matters</h3>
+                <p>pH affects nutrient availability. At certain pH levels, nutrients become locked up in the soil and unavailable to plants. Iron, for example, is less available in alkaline soils, leading to yellowing leaves in acid-loving plants.</p>
+                <p>pH also affects soil life. Bacteria thrive in neutral to slightly alkaline conditions, while fungi prefer acidic soils.</p>
+                <h3>Testing your soil</h3>
+                <p>You can buy a simple pH test kit or probe from a garden centre. For a more accurate result, send a sample to a lab. Test in several spots, as pH can vary across a garden.</p>
+                <h3>Adjusting pH</h3>
+                <p><strong>To raise pH (make more alkaline):</strong> Add garden lime or wood ash. Apply in autumn and retest in spring.</p>
+                <p><strong>To lower pH (make more acidic):</strong> Add elemental sulphur, pine needles, or composted oak leaves. This is slower and harder to control.</p>
+                <p>It's usually easier to choose plants suited to your existing pH than to change it dramatically. But small adjustments can make a big difference.</p>
+                <h3>Plants for acid soil</h3>
+                <p>Blueberries, cranberries, rhododendrons, azaleas, camellias, heathers, pieris, magnolias.</p>
+                <h3>Plants for alkaline soil</h3>
+                <p>Lavender, rosemary, brassicas, clematis, lilac, buddleia, sea holly.</p>
+                <p>Know your pH, and you'll unlock a healthier, more productive garden.</p>
+            `
+        },
+        pollinatorGarden: {
+            title: "How to Create a Pollinator-Friendly Garden (That Still Looks Beautiful)",
+            category: "design",
+            readtime: "9 min read",
+            author: "Elena Marsh",
+            date: "June 8, 2025",
+            excerpt: "Pollinators are in decline. But every garden — no matter how small — can become a refuge for bees, butterflies, and hoverflies.",
+            content: `
+                <p>The hum of bees on a summer afternoon is one of the great joys of gardening. But pollinators need our help. Habitat loss, pesticides, and climate change have all taken a toll.</p>
+                <p>The good news? A pollinator-friendly garden is also a beautiful garden. Here's how to make yours a haven.</p>
+                <h3>Plant for a long season</h3>
+                <p>Pollinators need food from early spring to late autumn. Choose a mix of plants that flower at different times: crocus and hellebores in late winter, alliums and foxgloves in early summer, echinacea and sedum in late summer, asters and ivy in autumn.</p>
+                <h3>Choose single flowers</h3>
+                <p>Double-flowered varieties often have little or no nectar and pollen. Single, open flowers are best — daisies, cosmos, calendula, borage, and most herbs.</p>
+                <h3>Provide habitat</h3>
+                <p>Pollinators need places to nest and overwinter. Leave some areas wild — a patch of long grass, a pile of logs, a bundle of hollow stems. Don't be too tidy.</p>
+                <h3>Skip the pesticides</h3>
+                <p>Even organic-approved pesticides can harm pollinators. Focus on building a balanced garden where predators keep pests in check.</p>
+                <h3>Water</h3>
+                <p>Bees need water too. A shallow dish with pebbles and water gives them a safe place to drink.</p>
+                <h3>Beautiful and functional</h3>
+                <p>A pollinator garden can be as designed and lovely as any other. Mix pollinator favourites with ornamental grasses, structural shrubs, and hard landscaping. The result is a garden that's alive in every sense.</p>
+                <p>Every flower helps. Start with a few, and watch your garden become a buzzing, fluttering, thriving community.</p>
+            `
+        },
+        raisedBeds: {
+            title: "Raised Beds: The Complete Guide to Building and Planting",
+            category: "growing",
+            readtime: "10 min read",
+            author: "Marcus Reed",
+            date: "August 19, 2025",
+            excerpt: "Raised beds offer better drainage, easier access, and higher yields. Here's everything you need to know to build and use them.",
+            content: `
+                <p>Raised beds have become a staple of kitchen gardens, allotments, and even small backyards. They're practical, productive, and — with a bit of care — beautiful.</p>
+                <h3>Why raised beds?</h3>
+                <p>Raised beds warm up faster in spring, drain better in wet climates, and allow you to control soil quality. They're easier on the back, too, especially if you build them tall.</p>
+                <p>They also extend the growing season and can be used on poor soil, concrete, or even balconies.</p>
+                <h3>Choosing materials</h3>
+                <p><strong>Timber:</strong> The classic choice. Untreated hardwood lasts longest. Avoid creosote-treated wood.</p>
+                <p><strong>Stone or brick:</strong> Durable and attractive, but expensive and heavy.</p>
+                <p><strong>Metal:</strong> Galvanised steel beds are long-lasting and look modern. They heat up in sun, which can be a benefit or a drawback.</p>
+                <p><strong>Composite:</strong> Made from recycled plastic. Rot-proof and low-maintenance.</p>
+                <h3>Size and placement</h3>
+                <p>A width of 1.2 metres is ideal — you can reach the centre from both sides. Length is flexible. Height should be at least 15 cm, ideally 30 cm for deep-rooted crops.</p>
+                <p>Place beds in full sun for most vegetables. Orient them east–west for even light.</p>
+                <h3>Filling raised beds</h3>
+                <p>Don't fill with garden soil alone. Use a mix of topsoil, compost, and well-rotted manure. In no-dig beds, you can fill with compost and plant directly into it.</p>
+                <p>Add a layer of cardboard at the bottom to suppress weeds if placing on grass.</p>
+                <h3>Planting and maintenance</h3>
+                <p>Raised beds dry out faster than ground beds, so mulch well and water regularly. Use crop rotation to prevent disease. Top up with compost each year.</p>
+                <p>With proper care, raised beds can be incredibly productive — and they make gardening accessible to almost everyone.</p>
+            `
+        },
+        shadeGardening: {
+            title: "Shade Gardening: Making the Most of Low-Light Areas",
+            category: "design",
+            readtime: "8 min read",
+            author: "Elena Marsh",
+            date: "May 5, 2025",
+            excerpt: "A shady garden is not a problem to be solved — it's an opportunity to grow a different palette of plants.",
+            content: `
+                <p>When I moved into my current house, the back garden was almost entirely shaded by a neighbour's oak. I'll admit, I panicked. But over time, I came to love the cool, green serenity of that space.</p>
+                <h3>Types of shade</h3>
+                <p><strong>Full shade:</strong> No direct sun. North-facing walls, under dense evergreens.</p>
+                <p><strong>Partial shade:</strong> 3–6 hours of sun, usually morning or late afternoon.</p>
+                <p><strong>Dappled shade:</strong> Filtered light through deciduous trees. The easiest shade to garden in.</p>
+                <h3>Plants for shade</h3>
+                <p>Ferns, hostas, hellebores, epimediums, pulmonarias, tiarellas, and many woodland bulbs all thrive in shade. For structure, consider hydrangeas, skimmia, and Japanese maples.</p>
+                <p>Don't forget foliage — in shade, leaf colour and texture matter more than flowers. Choose plants with variegated, silver, or burgundy leaves.</p>
+                <h3>Improving shade</h3>
+                <p>If the shade is caused by overhanging branches, you can thin them to let in more light. But don't remove trees entirely — they're valuable habitat.</p>
+                <p>Reflect light with pale walls, mirrors, or light-coloured mulch. Water features can also brighten a shady corner.</p>
+                <h3>Soil in shade</h3>
+                <p>Shady soil is often dry — tree roots take moisture — or waterlogged, if drainage is poor. Add compost to improve structure and moisture retention. Mulch to conserve water.</p>
+                <p>Shade gardens can be lush, tranquil, and deeply beautiful. Embrace the green.</p>
+            `
+        },
+        seedSaving: {
+            title: "Seed Saving: How to Collect and Store Seeds for Next Year",
+            category: "growing",
+            readtime: "8 min read",
+            author: "Marcus Reed",
+            date: "September 12, 2025",
+            excerpt: "Saving your own seed is thrifty, rewarding, and helps preserve genetic diversity. Here's how to do it properly.",
+            content: `
+                <p>There's something deeply satisfying about planting a seed you saved yourself. It completes the circle — from flower to seed to new plant.</p>
+                <h3>Which plants to save from</h3>
+                <p>Save seed from open-pollinated (heirloom) varieties, not F1 hybrids. F1 seeds won't come true — the offspring will be variable and often disappointing.</p>
+                <p>Easy plants for beginners: beans, peas, tomatoes, lettuce, marigolds, calendula, poppies, sunflowers.</p>
+                <h3>How to save seeds</h3>
+                <p><strong>Dry-seeded plants:</strong> Let seedheads mature on the plant. Collect on a dry day, then spread out to dry fully indoors. Store in paper envelopes.</p>
+                <p><strong>Wet-seeded plants (tomatoes, cucumbers):</strong> Scoop seeds and pulp into a jar, add water, and ferment for a few days. Viable seeds sink. Rinse and dry on a plate.</p>
+                <h3>Storing seeds</h3>
+                <p>Store in paper envelopes or glass jars in a cool, dark, dry place. Label with variety and date. Most seeds remain viable for 2–5 years; some, like parsnips, only 1 year.</p>
+                <h3>Isolation</h3>
+                <p>To keep varieties pure, isolate them. With tomatoes, you can bag blossoms. With beans, grow only one variety per season. Or accept some crossing — it can be fun.</p>
+                <h3>Why save seed?</h3>
+                <p>It saves money, preserves heritage varieties, and adapts plants to your specific conditions. Each year, your saved seed becomes better suited to your garden.</p>
+                <p>Seed saving is a quiet act of hope. It says: I believe in next year.</p>
+            `
+        }
+    };
+
+    // ============================================================
+    // RENDER LOGIC
+    // ============================================================
+
+    const articleGrid = document.getElementById('articleGrid');
+    const growingGrid = document.getElementById('growingGrid');
+    const soilGrid = document.getElementById('soilGrid');
+    const designGrid = document.getElementById('designGrid');
+    const popularList = document.getElementById('popularList');
+    const recommendedList = document.getElementById('recommendedList');
+    const sidebar = document.getElementById('sidebar');
+    const homePage = document.getElementById('homePage');
+    const articlePage = document.getElementById('articlePage');
+    const aboutPage = document.getElementById('aboutPage');
+    const contactPage = document.getElementById('contactPage');
+    const privacyPage = document.getElementById('privacyPage');
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function createCard(key, art) {
+        const div = document.createElement('div');
+        div.className = 'article-card';
+        div.dataset.category = art.category;
+        div.dataset.key = key;
+        div.innerHTML = `
+            <div class="meta">${art.category} · ${art.readtime}</div>
+            <h3><a href="#" onclick="openArticle('${key}'); return false;">${art.title}</a></h3>
+            <p>${art.excerpt}</p>
+            <span class="readtime">${art.date}</span>
+        `;
+        return div;
+    }
+
+    function renderHome() {
+        // Article grid (latest 6)
+        const keys = Object.keys(articles);
+        const latest = keys.slice(-6).reverse();
+        articleGrid.innerHTML = '';
+        latest.forEach(key => {
+            articleGrid.appendChild(createCard(key, articles[key]));
+        });
+
+        // Growing grid
+        const growingKeys = keys.filter(k => articles[k].category === 'growing').slice(0, 4);
+        growingGrid.innerHTML = '';
+        growingKeys.forEach(key => {
+            growingGrid.appendChild(createCard(key, articles[key]));
+        });
+
+        // Soil grid
+        const soilKeys = keys.filter(k => articles[k].category === 'soil').slice(0, 4);
+        soilGrid.innerHTML = '';
+        soilKeys.forEach(key => {
+            soilGrid.appendChild(createCard(key, articles[key]));
+        });
+
+        // Design grid
+        const designKeys = keys.filter(k => articles[k].category === 'design').slice(0, 4);
+        designGrid.innerHTML = '';
+        designKeys.forEach(key => {
+            designGrid.appendChild(createCard(key, articles[key]));
+        });
+
+        // Sidebar popular (first 4 by date? we'll pick some)
+        const popularKeys = ['noDigRevolution', 'soilFoodWeb', 'autumnPlanting', 'compostGuide'];
+        popularList.innerHTML = '';
+        popularKeys.forEach(key => {
+            const art = articles[key];
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#" onclick="openArticle('${key}'); return false;">${art.title}</a>
+                <span class="small-meta">${art.readtime}</span>`;
+            popularList.appendChild(li);
+        });
+
+        // Recommended
+        const recKeys = ['seedStarting', 'pruningBasics', 'pollinatorGarden', 'raisedBeds'];
+        recommendedList.innerHTML = '';
+        recKeys.forEach(key => {
+            const art = articles[key];
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="#" onclick="openArticle('${key}'); return false;">${art.title}</a>
+                <span class="small-meta">${art.category} · ${art.readtime}</span>`;
+            recommendedList.appendChild(li);
+        });
+
+        // Sidebar visibility on home
+        sidebar.style.display = 'block';
+    }
+
+    function showHome() {
+        homePage.style.display = 'block';
+        articlePage.classList.remove('active');
+        aboutPage.classList.remove('active');
+        contactPage.classList.remove('active');
+        privacyPage.classList.remove('active');
+        articlePage.style.display = 'none';
+        aboutPage.style.display = 'none';
+        contactPage.style.display = 'none';
+        privacyPage.style.display = 'none';
+        sidebar.style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    function openArticle(key) {
+        const art = articles[key];
+        if (!art) return;
+        homePage.style.display = 'none';
+        aboutPage.style.display = 'none';
+        contactPage.style.display = 'none';
+        privacyPage.style.display = 'none';
+        sidebar.style.display = 'none';
+
+        document.getElementById('articleTitle').innerHTML = art.title;
+        document.getElementById('articleMeta').innerHTML = `${art.category} · ${art.readtime} · by ${art.author} · ${art.date}`;
+        document.getElementById('articleContent').innerHTML = art.content;
+
+        articlePage.classList.add('active');
+        articlePage.style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    function showAbout() {
+        homePage.style.display = 'none';
+        articlePage.style.display = 'none';
+        contactPage.style.display = 'none';
+        privacyPage.style.display = 'none';
+        sidebar.style.display = 'none';
+        aboutPage.classList.add('active');
+        aboutPage.style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    function showContact() {
+        homePage.style.display = 'none';
+        articlePage.style.display = 'none';
+        aboutPage.style.display = 'none';
+        privacyPage.style.display = 'none';
+        sidebar.style.display = 'none';
+        contactPage.classList.add('active');
+        contactPage.style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    function showPrivacy() {
+        homePage.style.display = 'none';
+        articlePage.style.display = 'none';
+        aboutPage.style.display = 'none';
+        contactPage.style.display = 'none';
+        sidebar.style.display = 'none';
+        privacyPage.classList.add('active');
+        privacyPage.style.display = 'block';
+        window.scrollTo(0, 0);
+    }
+
+    function filterCategory(cat) {
+        currentFilter = cat;
+        currentSearch = '';
+        document.getElementById('searchInput').value = '';
+        // update active button
+        document.querySelectorAll('.category-filters button').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.textContent.toLowerCase() === cat || (cat === 'all' && btn.textContent === 'All')) {
+                btn.classList.add('active');
+            }
+        });
+        applyFilterAndSearch();
+        showHome();
+    }
+
+    function performSearch() {
+        currentSearch = document.getElementById('searchInput').value.toLowerCase().trim();
+        if (currentSearch) {
+            currentFilter = 'all';
+            document.querySelectorAll('.category-filters button').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.category-filters button').classList.add('active');
+        }
+        applyFilterAndSearch();
+        showHome();
+    }
+
+    function applyFilterAndSearch() {
+        const allCards = document.querySelectorAll('.article-card');
+        allCards.forEach(card => {
+            const cat = card.dataset.category;
+            const key = card.dataset.key;
+            const art = articles[key];
+            let matchesFilter = (currentFilter === 'all' || cat === currentFilter);
+            let matchesSearch = true;
+            if (currentSearch) {
+                const title = art.title.toLowerCase();
+                const excerpt = art.excerpt.toLowerCase();
+                matchesSearch = title.includes(currentSearch) || excerpt.includes(currentSearch);
+            }
+            if (matchesFilter && matchesSearch) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    function subscribeNewsletter(e) {
+        e.preventDefault();
+        const input = e.target.querySelector('input');
+        if (input && input.value) {
+            alert(`Thank you for subscribing, ${input.value}. (This is a demo — no data is sent.)`);
+            input.value = '';
+        }
+    }
+
+    // Initialize
+    window.onload = function() {
+        renderHome();
+        showHome();
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy · Ashwood Botanical Tales</title>
+    <meta name="description" content="Privacy policy for Ashwood Botanical Tales — how we handle your data, cookies, and your rights.">
+    <link rel="canonical" href="https://www.ashwoodbotanicaltales.com/privacy.html">
+    <style>
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf9f7;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #2e3b2e;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        .wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.02);
+            padding: 0 2rem 2rem;
+            border-radius: 0 0 8px 8px;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 {
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e2b1e;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 1px solid #dcd9d2;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #2b462b;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #2e3b2e;
+        }
+
+        a {
+            color: #3b5e3b;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #1e3a1e;
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin: 0 0 1.5rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        /* --- HEADER (same as contact) --- */
+        .blog-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 0 1.5rem;
+            border-bottom: 1px solid #e2dfd8;
+            margin-bottom: 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #3b5e3b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f0ede6;
+            font-size: 1.8rem;
+            font-weight: 400;
+            font-family: 'Georgia', serif;
+            line-height: 1;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text .main {
+            font-size: 1.75rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #1e2b1e;
+        }
+
+        .logo-text .sub {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #6f7a6a;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #3a4a3a;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #1e2b1e;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* --- PRIVACY PAGE LAYOUT --- */
+        .privacy-content {
+            max-width: 860px;
+            margin: 0 auto 3rem;
+        }
+
+        .privacy-content .meta {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6f7a6a;
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #eae7e1;
+        }
+
+        .privacy-content .lead {
+            font-size: 1.15rem;
+            color: #3d4a3d;
+            margin-bottom: 2rem;
+        }
+
+        .privacy-content .highlight-box {
+            background: #f7f5f1;
+            padding: 1.75rem 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #3b5e3b;
+            margin: 2rem 0;
+        }
+
+        .privacy-content .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .privacy-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0 2rem;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .privacy-content th {
+            text-align: left;
+            background: #edebe4;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #2b462b;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 0.75rem;
+            border-bottom: 2px solid #dcd9d2;
+        }
+
+        .privacy-content td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #eae7e1;
+            vertical-align: top;
+        }
+
+        .privacy-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .back-link {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: #3b5e3b;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* --- FOOTER --- */
+        .blog-footer {
+            border-top: 1px solid #dcd9d2;
+            padding: 2.5rem 0 1.5rem;
+            margin-top: 2rem;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 0.85rem;
+            color: #5e6a5e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: #4e5e4e;
+        }
+
+        .footer-links a:hover {
+            color: #1e2b1e;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .wrapper {
+                padding: 0 1.5rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .blog-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            .wrapper {
+                padding: 0 1rem 1rem;
+            }
+
+            .privacy-content .highlight-box {
+                padding: 1.25rem 1.25rem;
+            }
+
+            .blog-footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .privacy-content table {
+                font-size: 0.8rem;
+            }
+
+            .privacy-content th,
+            .privacy-content td {
+                padding: 0.5rem 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- ========== HEADER ========== -->
+    <header class="blog-header">
+        <div class="logo-area">
+            <div class="logo-icon">🌿</div>
+            <div class="logo-text">
+                <span class="main">Ashwood Botanical Tales</span>
+                <span class="sub">Independent gardening journal</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms Of Privacy</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="cookies.html">Cookies Policy</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== PRIVACY PAGE ========== -->
+    <main class="privacy-content">
+        <a href="index.html" class="back-link">← Back to all articles</a>
+
+        <h1>Privacy Policy</h1>
+        <div class="meta">Last updated: 1 March 2026 · Version 2.4</div>
+
+        <p class="lead">At Ashwood Botanical Tales, we believe that good gardening—and good storytelling—is built on trust. This policy explains what personal information we collect, why we collect it, and how you can exercise your rights. We keep things simple, just like our approach to soil.</p>
+
+        <div class="highlight-box">
+            <p><strong>🌱 The short version:</strong> We collect only what we need to run this journal. We never sell your data. We use a few essential cookies. You can ask us to delete your information at any time. Questions? <a href="contact.html">Contact us</a>.</p>
+        </div>
+
+        <h2>1. Who we are</h2>
+        <p>Ashwood Botanical Tales is an independent gardening journal published from Herefordshire, United Kingdom. For the purposes of data protection law, we are the data controller for the personal information described in this policy.</p>
+        <p>If you have any questions about this policy or your data, you can reach our editorial team at <a href="mailto:privacy@ashwoodbotanicaltales.com">privacy@ashwoodbotanicaltales.com</a>.</p>
+
+        <h2>2. What information we collect</h2>
+        <p>We collect information in the following ways:</p>
+
+        <h3>2.1 Information you give us</h3>
+        <ul>
+            <li><strong>Contact form submissions:</strong> When you use our <a href="contact.html">contact form</a>, we collect your name, email address, subject category, and message content.</li>
+            <li><strong>Email correspondence:</strong> If you email us directly, we keep a record of that correspondence.</li>
+            <li><strong>Newsletter sign-ups (if offered):</strong> If you subscribe to our occasional newsletter, we collect your email address and subscription preferences.</li>
+        </ul>
+
+        <h3>2.2 Information collected automatically</h3>
+        <ul>
+            <li><strong>Server logs:</strong> Like most websites, our hosting provider records standard technical information such as your IP address, browser type, referring pages, and timestamps. These logs help us diagnose problems and understand broad usage patterns.</li>
+            <li><strong>Cookies:</strong> We use a small number of cookies to remember your preferences and to understand how our content is used. See our <a href="cookies.html">Cookies Policy</a> for details.</li>
+        </ul>
+
+        <h3>2.3 Information we do <em>not</em> collect</h3>
+        <p>We do not collect sensitive personal data (such as health information, political opinions, or biometric data). We also do not knowingly collect information from children under the age of 16.</p>
+
+        <h2>3. How we use your information</h2>
+        <p>We use the information we collect for the following purposes:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Purpose</th>
+                    <th>Legal basis (UK GDPR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>To respond to your contact form submissions or emails</td>
+                    <td>Legitimate interests (responding to enquiries)</td>
+                </tr>
+                <tr>
+                    <td>To send you our newsletter, if you have opted in</td>
+                    <td>Consent</td>
+                </tr>
+                <tr>
+                    <td>To improve our website, content, and user experience</td>
+                    <td>Legitimate interests (analytics and improvement)</td>
+                </tr>
+                <tr>
+                    <td>To comply with legal obligations or enforce our terms</td>
+                    <td>Legal obligation / legitimate interests</td>
+                </tr>
+                <tr>
+                    <td>To protect against spam, fraud, or abuse</td>
+                    <td>Legitimate interests (security)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>We will never sell, rent, or trade your personal information to third parties for marketing purposes.</p>
+
+        <h2>4. Cookies and similar technologies</h2>
+        <p>We use a minimal set of cookies to make the site work properly and to understand which articles are most useful to our readers. You can control cookies through your browser settings. For full details, please see our <a href="cookies.html">Cookies Policy</a>.</p>
+        <p>We do not use third-party advertising cookies or cross-site tracking pixels.</p>
+
+        <h2>5. Who we share your information with</h2>
+        <p>We only share your personal information with trusted service providers who help us run the journal. These include:</p>
+        <ul>
+            <li><strong>Hosting provider:</strong> Our website is hosted on secure servers. Server logs may be processed by our hosting partner.</li>
+            <li><strong>Email service:</strong> If you contact us or subscribe, your email may be processed by our email provider.</li>
+            <li><strong>Analytics provider:</strong> We use privacy-respecting analytics to understand site usage. Data is aggregated and anonymised where possible.</li>
+        </ul>
+        <p>All service providers are contractually required to protect your data and only process it for the purposes we specify. We do not transfer your personal data outside the UK/EEA unless adequate safeguards are in place.</p>
+
+        <h2>6. How long we keep your information</h2>
+        <p>We keep personal information only as long as necessary for the purposes described above:</p>
+        <ul>
+            <li><strong>Contact form submissions:</strong> Retained for up to 24 months, then deleted.</li>
+            <li><strong>Email correspondence:</strong> Retained for up to 3 years for reference, unless you request earlier deletion.</li>
+            <li><strong>Newsletter subscriptions:</strong> Retained until you unsubscribe, plus a short period to honour your request.</li>
+            <li><strong>Server logs:</strong> Retained for up to 90 days.</li>
+        </ul>
+
+        <h2>7. Your rights</h2>
+        <p>Under UK data protection law, you have the following rights:</p>
+        <ul>
+            <li><strong>Right to access:</strong> You can request a copy of the personal data we hold about you.</li>
+            <li><strong>Right to rectification:</strong> You can ask us to correct inaccurate or incomplete data.</li>
+            <li><strong>Right to erasure:</strong> You can ask us to delete your personal data in certain circumstances.</li>
+            <li><strong>Right to restrict processing:</strong> You can ask us to limit how we use your data.</li>
+            <li><strong>Right to data portability:</strong> You can request your data in a structured, machine-readable format.</li>
+            <li><strong>Right to object:</strong> You can object to processing based on legitimate interests.</li>
+            <li><strong>Right to withdraw consent:</strong> If we rely on consent, you can withdraw it at any time.</li>
+        </ul>
+        <p>To exercise any of these rights, please email <a href="mailto:privacy@ashwoodbotanicaltales.com">privacy@ashwoodbotanicaltales.com</a>. We will respond within one month. You also have the right to lodge a complaint with the UK Information Commissioner's Office (ICO).</p>
+
+        <h2>8. Security</h2>
+        <p>We take reasonable technical and organisational measures to protect your personal information from unauthorised access, loss, or misuse. These include encrypted connections (HTTPS), access controls, and regular security reviews. However, no method of transmission over the internet is completely secure, and we cannot guarantee absolute security.</p>
+
+        <h2>9. Links to other websites</h2>
+        <p>Our journal may contain links to other websites—nurseries, seed suppliers, or fellow gardening blogs. We are not responsible for the privacy practices of those sites. We encourage you to read their privacy policies before providing any personal information.</p>
+
+        <h2>10. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The "last updated" date at the top of this page indicates when the policy was last revised. We encourage you to review this page periodically.</p>
+
+        <div class="highlight-box">
+            <p><strong>🌿 A final note from the greenhouse:</strong> We're gardeners, not data brokers. Your trust matters to us more than any analytics metric. If you ever have concerns about how we handle your information, please <a href="contact.html">get in touch</a>—we'll do our best to make it right.</p>
+        </div>
+
+        <p style="margin-top:2.5rem; font-family:'Helvetica',sans-serif; font-size:0.85rem; color:#6f7a6a;">This policy is provided for informational purposes and does not constitute legal advice. For specific legal concerns, please consult a qualified professional.</p>
+    </main>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="blog-footer" style="max-width:1300px; margin:0 auto; padding:2rem 1rem;">
+    <div>© 2026 Ashwood Botanical Tales. Independent gardening journal.</div>
+    <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+    </ul>
+</footer>
+</body>
+</html>
